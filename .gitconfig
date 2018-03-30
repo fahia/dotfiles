@@ -1,0 +1,15 @@
+[core]
+	editor = vim
+[user]
+	name =
+	email =
+[alias]
+  s="!git status"
+  bn="!git rev-parse --abbrev-ref HEAD"
+  cm="!git commit -m"
+  pu="!git push origin $(git bn)"
+  d="!git diff"
+  co="!git checkout"
+  cob="!git checkout -b"
+  pl="!git pull origin master --rebase"
+  bp="!git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -D"
