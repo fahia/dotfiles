@@ -24,13 +24,7 @@ augroup END
 
 syntax enable
 
-" Configs to make Molokai look great
-" set background=dark
-" let g:molokai_original=1
-  let g:rehash256=1
-" set t_Co=256
 " colorscheme nord 
-
 color nord
 
 " Show trailing whitespace and spaces before a tab:
