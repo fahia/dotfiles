@@ -10,8 +10,7 @@ filetype plugin indent on
 " Ruby stuff
 " ================
 syntax on                 " Enable syntax highlighting
-filetype plugin indent on " Enable filetype-specific indenting and plugins
-
+filetype plugin indent on " Enable filetype-specific indenting and plugins 
 augroup myfiletypes
 	" Clear old autocmds in group
 	autocmd!
@@ -24,7 +23,13 @@ augroup END
 
 syntax enable
 
+" Configs to make Molokai look great
+" set background=dark
+" let g:molokai_original=1
+  let g:rehash256=1
+" set t_Co=256
 " colorscheme nord 
+
 color nord
 
 " Show trailing whitespace and spaces before a tab:
@@ -101,6 +106,8 @@ set directory+=~/.vim/swap//
 set directory+=~/tmp//
 set directory+=.
 
+let g:typescript_indent_disable = 1
+
 " viminfo stores the the state of your previous editing session
 set viminfo+=n~/.vim/viminfo
 
@@ -128,3 +135,5 @@ nnoremap <S-f> :Files!<return>
 nnoremap <C-f> :Ag<return>
 " Tabbing between buffers
 nnoremap <S-b> :Buffers<CR>
+" Comment blocks using #
+autocmd FileType apache setlocal commentstring=#\ %s
