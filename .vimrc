@@ -1,5 +1,5 @@
 set nocompatible " be iMproved
-set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 set clipboard=unnamed
 set tags=./tags; " Set tags directory
 set autoindent " Auto indention should be on
@@ -106,8 +106,6 @@ set directory+=~/.vim/swap//
 set directory+=~/tmp//
 set directory+=.
 
-let g:typescript_indent_disable = 1
-
 " viminfo stores the the state of your previous editing session
 set viminfo+=n~/.vim/viminfo
 
@@ -137,3 +135,6 @@ nnoremap <C-f> :Ag<return>
 nnoremap <S-b> :Buffers<CR>
 " Comment blocks using #
 autocmd FileType apache setlocal commentstring=#\ %s
+" Don't write to the default register when pasting
+xnoremap p "_dP
+
