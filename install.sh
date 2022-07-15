@@ -90,23 +90,6 @@ install_eslint_d() {
   fi
 }
 
-install_nvim_nightly() {
-  echo "\n  -- installing nvim nightly -- \n"
-
-  #curl -L https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage \
-    #-o /tmp/nvim.appimage
-
-  curl -L https://github.com/neovim/neovim/releases/download/v0.5.1/nvim.appimage \
-    -o /tmp/nvim.appimage
-
-  chmod u+x /tmp/nvim.appimage
-
-  /tmp/nvim.appimage --appimage-extract
-
-  [ -d /squashfs-root ] || sudo mv squashfs-root /
-  [ -f /usr/local/bin/nvim ] || sudo ln -s /squashfs-root/usr/bin/nvim /usr/local/bin/nvim
-}
-
 install_language_servers() {
   echo "\n -- installing language servers -- \n"
   sudo npm install -g typescript typescript-language-server
